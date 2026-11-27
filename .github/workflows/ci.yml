@@ -1,0 +1,15 @@
+# keelstone-lab: workflow sintético (só imprime uma linha)
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "laboratorio keelstone - nada a construir"
